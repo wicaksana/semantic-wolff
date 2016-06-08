@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY page "http://dbpedia.org/page/" >
+    <!ENTITY ontology "http://dbpedia.org/ontology/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.wolff.nl/2016/wolff.owl#"
+     xml:base="http://www.wolff.nl/2016/wolff.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:page="http://dbpedia.org/page/"
+     xmlns:ontology="http://dbpedia.org/ontology/">
+    <owl:Ontology rdf:about="http://www.wolff.nl/2016/wolff.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Distributes -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#Distributes">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#isDistributedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Produced -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#Produced">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#isProducedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesActorIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesActorIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesCinematographerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesCinematographerIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasCinematographer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesDirectorIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesDirectorIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasDirector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesEditorIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesEditorIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasEditor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesMusicComposerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesMusicComposerIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasMusicComposer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesProducerIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesProducerIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasProducer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#becomesWriterIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#becomesWriterIn">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasWriter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasActor">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasCinematographer -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasCinematographer">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasDirector">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasEditor -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasEditor">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasGenre">
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasMusicComposer -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasMusicComposer">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasPresentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasPresentation">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Presentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasProducer -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasProducer">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#hasWriter -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#hasWriter">
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#isDistributedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#isDistributedBy">
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Company"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#isGenreOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#isGenreOf">
+        <owl:inverseOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#hasGenre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#isProducedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#isProducedBy">
+        <rdfs:range rdf:resource="http://www.wolff.nl/2016/wolff.owl#Company"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#abstract">
+        <rdfs:comment>Short description of a movie</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#birthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#birthDate">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#budget -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#budget">
+        <rdfs:comment>movie budget</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#country">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#duration">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#language">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#name">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#nationality">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#releaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#releaseDate">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.wolff.nl/2016/wolff.owl#title">
+        <rdfs:comment>Movie title</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Action -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Action">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Actor -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Actor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesActorIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Adventure -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Adventure">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Animation -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Animation">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Cinematographer -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Cinematographer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesCinematographerIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Comedy -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Company -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Company"/>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Composer -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Composer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesMusicComposerIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Director -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Director">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesDirectorIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Distributor -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Distributor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Company"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#Distributes"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Documentary -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Documentary">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Drama -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Editor -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Editor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesEditorIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Fantasy -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Genre -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Horror -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Movie -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Movie">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Company"/>
+            <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+            <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Person -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Presentation -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Presentation"/>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Producer -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Producer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesProducerIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Romance -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Studio -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Studio">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Company"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#Produced"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Company"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Thriller -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Thriller">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#Writer -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#Writer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.wolff.nl/2016/wolff.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.wolff.nl/2016/wolff.owl#becomesWriterIn"/>
+                        <owl:someValuesFrom rdf:resource="http://www.wolff.nl/2016/wolff.owl#Movie"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wolff.nl/2016/wolff.owl#3D -->
+
+    <owl:Class rdf:about="http://www.wolff.nl/2016/wolff.owl#3D">
+        <rdfs:subClassOf rdf:resource="http://www.wolff.nl/2016/wolff.owl#Presentation"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

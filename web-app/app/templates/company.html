@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Company: {{ company }}</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th><h3>Movies produced/distributed</h3></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for movie in list %}
+        <tr>
+            <td><a href="/film/{{movie}}">{{movie}}</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

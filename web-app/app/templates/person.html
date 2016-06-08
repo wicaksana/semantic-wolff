@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="{{img}}"><img src="{{img}}" alt="Image" class="img-thumbnail center-block"></a>
+    </div>
+    <div class="col-md-8">
+    <h1>{{ list['name'][0] }}</h1>
+
+    {% for birthdate in list['birthdate'] %}
+        <h3>Birthdate: {{ birthdate }}</h3>
+    {% endfor %}
+
+    {% for nationality in list['nationality'] %}
+        <h2>Nationality: {{ nationality }}</h2>
+    {% endfor %}
+    </div>
+</div>
+
+<br>
+<p><h3>People whom {{ list['name'][0] }} frequently collaborates with</h3></p>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center" width="20%">Name</th>
+            <th class="text-center" width="8%">#</th>
+            <th class="text-center">Movies</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for person in collaboration %}
+    <tr>
+        <td class="text-center"><a href="/person/{{person['name']}}">{{ person['name'] }}</a></td>
+        <td class="text-center">{{ person['movietotal'] }}</td>
+        <td>{% for movie in person['movielist'] %} <a href="/film/{{movie}}">{{ movie }}</a>, {% endfor %}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<p><h3>Oscar winners with whom {{ list['name'][0] }} ever worked together</h3></p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Movie title</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in oscar_winners %}
+    <tr>
+        <td class="text-center">{{ person["name"] }}</td>
+        <td class="text-center">{{ person["movie"] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+<br>
+<p><h3>Works of {{ list['name'][0] }}</h3></p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Role(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for movie in list['movie'] %}
+        <tr>
+        <td><a href="/film/{{movie}}">{{ movie }}</a></td>
+        <td>{% for role in list['movie'][movie] %} {{role }}, {% endfor %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

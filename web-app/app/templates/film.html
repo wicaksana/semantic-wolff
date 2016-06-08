@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{{img}}"><img src="{{img}}" alt="Movie poster" class="img-thumbnail center-block"></a>
+        </div>
+        <div class="col-md-8">
+            <h1>{{ list['title'][0] }}</h1>
+            <blockquote><p>{{ list['abstract'][0] }}</p></blockquote>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <td>Director </td>
+                <td>{% for director in list['directors'] %} <a href="/person/{{director}}">{{ director }}, </a>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Producer </td>
+                <td>{% for producer in list['producers'] %} <a href="/person/{{producer}}">{{ producer }}, </a>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Actor </td>
+                <td>{% for actor in list['actors'] %} <a href="/person/{{actor}}">{{ actor }}, </a> {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Composer </td>
+                <td>{% for composer in list['composers'] %}<a href="/person/{{composer}}">{{ composer }} </a>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Cinematographer </td>
+                <td>{% for cinematographer in list['cgraphers'] %}<a href="/person/{{cinematographer}}">{{ cinematographer }}</a>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Editor </td>
+                <td>{% for editor in list['editors'] %}<a href="/person/{{editor}}">{{ editor }}</a>{% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Writer </td>
+                <td>{% for writer in list['writers'] %}<a href="/person/{{writer}}">{{ writer }}, </a>{% endfor %}</td>
+            </tr>
+            {% for duration in list['duration'] %}
+            <tr>
+                <td>Duration </td>
+                <td>{{ duration }} minutes</a></td>
+            </tr>
+            {% endfor %}
+            {% for budget in list['budget'] %}
+            <tr>
+                <td>Budget </td>
+                <td>$ {{ budget }}</a></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>Genre </td>
+                <td>{% for genre in list['genre'] %} <a href="/genre/{{genre}}">{{ genre }}</a>, {% endfor %}</td>
+            </tr>
+            <tr>
+                <td>Country </td>
+                <td>{% for country in list['country'] %} <a href="/country/{{country}}">{{ country }}</a>, {% endfor %}</td>
+            </tr>
+            {% for distributor in list['distributors'] %}
+            <tr>
+                <td>Distributor </td>
+                <td><a href="/company/{{distributor}}">{{ distributor }}</a></td>
+            </tr>
+            {% endfor %}
+            {% for studio in list['studio'] %}
+            <tr>
+                <td>Studio </td>
+                <td><a href="/company/{{studio}}">{{ studio }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

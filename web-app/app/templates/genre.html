@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Genre: {{ genre }}</h1>
+
+{% for movie in list %}
+    <a href="/film/{{movie}}">{{movie}}</a><br>
+{% endfor %}
+{% endblock %}

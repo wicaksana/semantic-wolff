@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Welcome</h1>
+        <p class="lead">Welcome to Wolff Cinema. The best place to enjoy your time</p>
+    </div>
+    <div class="row">
+        {% for item in list %}
+            <div class="col-md-4">
+                <h2>{{ item['title']['value'] }}</h2>
+                <p>{{ item['abstract']['value'] }}</p>
+                <a class="btn btn-default" href="/film/{{item['movie']['value']}}" role="button">View details »</a>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
