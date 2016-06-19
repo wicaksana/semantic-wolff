@@ -1,5 +1,11 @@
 ## Enriching Wolff Bioscopen Website Using Linked Data from DBpedia
 
+### Group Members
+
+1. M.A. Wicaksana
+2. I. Timmer
+3. K.K.T. Chandrasekar
+
 ### Overview
 
 We developed a proof-of-concept of an improved version of [Wolff Bioscopen website](http://www.wolff.nl/) which uses Linked Data from [DBpedia](http://wiki.dbpedia.org/) to provide non-trivial dynamic information which cannot be found in search engine easily. To achieve this, we developed a movie ontology and enriched original Wolff movie data with additional data from DBpedia by using the self-developed ontology as the reference.
