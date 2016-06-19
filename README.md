@@ -21,7 +21,8 @@ Steps:
 
 ### Features
 
-1. 'With whom does a subject frequently works together with, and in what movies?'
+* **'With whom does a subject frequently works together with, and in what movies?'**
+
 For example, we know that Leonardo diCaprio (the subject) has worked together with director Martin Scorcese in many movies in the past. But to find the similar knowledge over arbitrary person in movie industry is not an easy question. We cannot immediately find the answer through quick search in Google, especially if the subject is not really well-known. 
 
 The following SPARQL query addresses this question:
@@ -55,9 +56,9 @@ ORDER BY DESC(?movietotal)
 LIMIT 15
 ```
 
-2. 'Which Oscar winners whom the subject worked together in the past, and in what movies?'
+* **'Which Oscar winners whom the subject worked together in the past, and in what movies?'**
 
- This is more or less similar to the previous query, and is difficult to find the answer by quick googling for arbitrary person. Here, we define Oscar winners as actors whom ever won either best actor, best actress, best supporting actor, or best supporting actress of Academy Awards
+This is more or less similar to the previous query, and is difficult to find the answer by quick googling for arbitrary person. Here, we define Oscar winners as actors whom ever won either best actor, best actress, best supporting actor, or best supporting actress of Academy Awards
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -89,9 +90,6 @@ BIND(str(?title) AS ?strippedtitle)
 }
 }
 ```
-### The Rest of the Details..
-
-Please read the [report](report.pdf)
 
 ### Screenshots
 
@@ -111,6 +109,9 @@ And the following is the example of the list of Oscar winners with whom Quentin 
 
 ![Oscar winner working with Quentin Tarantino][oscarWinner]
 
+### The Rest of the Details..
+
+Please read the [report](report.pdf)
 
 ### Files 
 
