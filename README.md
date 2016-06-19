@@ -59,7 +59,7 @@ LIMIT 15
 
  This is more or less similar to the previous query, and is difficult to find the answer by quick googling for arbitrary person. Here, we define Oscar winners as actors whom ever won either best actor, best actress, best supporting actor, or best supporting actress of Academy Awards
 
-```
+```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dbo: <http://dbpedia.org/ontology/>
